@@ -76,21 +76,23 @@ interface Props {
 
 const AppLayout = ({ title, desc, children }: Props) => {
     return (
-        <div className="relative bg-white ">
+        <div className="relative bg-gray-700 ">
             <Meta pageTitle={title} description={desc} />
-            <div className="mx-auto h-full" style={{ minHeight: 85 + 'vh' }}>
-                <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32 h-full">
+            
+            <div className="h-full mx-auto" style={{ minHeight: 85 + 'vh' }}>
+                <div className="relative z-10 h-full pb-8 bg-gray-700 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
                     <div className="dark">
                         <AppHeader />
                     </div>
 
-                    <main className="mx-auto max-w-7xl px-4 mt-8 sm:px-6  lg:px-8 h-full">{children}</main>
+                    <main className="h-full px-4 mx-auto mt-8 max-w-7xl sm:px-6 dark lg:px-8">{children}</main>
                 </div>
             </div>
             <div className="dark">
                 <FooterLight links={footerLink} />
             </div>
         </div>
+        
     );
 };
 
